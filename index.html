@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAURO — Estado del sistema</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --ink:#10201A; --paper:#F2F4F0;
+    --green-900:#0C231B; --green-800:#103024;
+    --accent:#2FA873; --accent-bright:#37C98B; --accent-soft:#A9C2B6;
+  }
+  body{
+    font-family:'IBM Plex Sans',system-ui,sans-serif; color:var(--ink);
+    background:var(--paper); min-height:100vh; display:flex;
+    align-items:center; justify-content:center; padding:24px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .card{
+    max-width:480px; width:100%; position:relative; overflow:hidden;
+    background:
+      radial-gradient(120% 130% at 0% 0%,rgba(47,168,115,.22),transparent 55%),
+      linear-gradient(150deg,var(--green-800),var(--green-900));
+    color:#fff; padding:44px 36px; text-align:center;
+  }
+  .card::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+    background-size:40px 40px;
+    -webkit-mask:radial-gradient(120% 90% at 50% 0%,#000,transparent 75%);
+    mask:radial-gradient(120% 90% at 50% 0%,#000,transparent 75%);
+  }
+  .contenido{position:relative;z-index:1}
+  .logo-badge{
+    width:76px;height:76px;margin:0 auto 18px;background:#fff;
+    border:1px solid rgba(255,255,255,.14); border-radius:50%;
+    display:grid;place-items:center;overflow:hidden;
+  }
+  .logo-badge img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'IBM Plex Mono';font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--accent-bright);border:1px solid rgba(47,168,115,.4);padding:5px 11px;margin-bottom:18px;
+  }
+  h1{font-family:'Archivo';font-weight:800;font-size:23px;line-height:1.25;letter-spacing:-.4px;margin-bottom:16px}
+  p{font-size:14.5px;line-height:1.65;color:var(--accent-soft);margin-bottom:14px}
+  .contacto{margin-top:26px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
+  .contacto p{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#5E7A6D;margin-bottom:14px}
+  .botones{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .botones a{
+    display:inline-block;text-decoration:none;font-size:13.5px;font-weight:700;
+    padding:11px 20px;border-radius:2px;font-family:'IBM Plex Sans';
+    transition:background .16s ease,box-shadow .16s ease;
+  }
+  .btn-wpp{background:var(--accent);color:var(--green-900)}
+  .btn-wpp:hover{background:var(--accent-bright);box-shadow:0 8px 20px -8px rgba(47,168,115,.7)}
+  .btn-ig{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3)}
+  .btn-ig:hover{border-color:#fff}
+  footer{margin-top:22px;font-family:'IBM Plex Mono';font-size:9.5px;letter-spacing:1px;color:#5E7A6D}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="contenido">
+      <div class="logo-badge"><img src="logo.png" alt="LAURO"></div>
+      <div class="eyebrow">Estado del sistema</div>
+      <h1>Estamos temporalmente fuera de línea</h1>
+      <p>Nuestro sistema (sitio, portales y panel) está momentáneamente inaccesible por un problema técnico. Ya estamos al tanto y trabajando para restablecerlo.</p>
+      <p>Ningún dato ni pago se pierde durante este tiempo. Por favor, intenta acceder nuevamente en unos minutos.</p>
+      <div class="contacto">
+        <p>¿Necesitas ayuda urgente?</p>
+        <div class="botones">
+          <a class="btn-wpp" href="https://wa.me/595973738431" target="_blank" rel="noopener">WhatsApp Secretaría</a>
+          <a class="btn-ig" href="https://instagram.com/lauroucp.cde" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <footer>LIGA ACADÉMICA DE UROLOGÍA — UCP · CDE</footer>
+    </div>
+  </div>
+</body>
+</html>
